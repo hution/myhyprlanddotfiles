@@ -12,10 +12,13 @@
 	"modules-right": [
     "custom/left-arrow-dark",
     "clock#1",
+    "custom/left-arrow-light",
     "custom/left-arrow-dark",
     "clock#2",
+    "custom/left-arrow-light",
     "custom/left-arrow-dark",
     "clock#3",
+    "custom/left-arrow-light",
 		"custom/left-arrow-dark",
 		"pulseaudio",
 		"custom/left-arrow-light",
