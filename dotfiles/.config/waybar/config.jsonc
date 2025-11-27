@@ -6,8 +6,9 @@
 
 	"modules-left": [
 		"hyprland/workspaces",
-		"custom/right-arrow-dark"
-	],
+		"custom/right-arrow-dark",
+    "custom/spotify"
+  ],
 	"modules-center": ["hyprland/window"],
 	"modules-right": [
     "custom/left-arrow-dark",
@@ -42,6 +43,16 @@
     "max-length": 50,
     "separate-outputs": true
 
+  },
+
+  "custom/spotify": {
+    "format": " {}",
+    "max-length": 40,
+    "interval": 5,
+    "exec": "playerctl -p spotify metadata --format '{{ artist}} - {{ title}}' 2>/dev/null || echo ''",
+    "on-click": "playerctl -p spotify play-pause",
+    "on-scroll-up": "playerctl -p spotify next",
+    "on-scroll-down": "playerctl -p spotify previous"
   },
 
 	"custom/left-arrow-dark": {

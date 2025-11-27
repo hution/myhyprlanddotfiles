@@ -64,6 +64,10 @@ window#waybar {
   color: #1a1a1a;
 }
 
+#custom-spotify {
+  padding: 0 10px;
+  color: #268bd2;
+}
 
 #pulseaudio {
 	color: #268bd2;
