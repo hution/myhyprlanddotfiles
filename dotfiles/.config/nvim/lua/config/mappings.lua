@@ -76,11 +76,21 @@ map("n", "<leader>csA", ":lua require('decisive').align_csv_clear({})<cr>")
 map("n", "[c", ":lua require('decisive').align_csv_prev_col()<cr>")
 map("n", "]c", ":lua require('decisive').align_csv_next_col()<cr>")
 
+-- LSP and Autocomplete settings
+map('n', 'gd', vim.lsp.buf.definition, { desc = "Go to definition" })
 
 map("n", "<leader>H", function() --toggle htop in term
     _G.htop:toggle()
 end)
 
+
+-- Debugger controls
+map('n', '<F5>', require('dap').continue, { desc = 'Debug: Start/Continue' })
+map('n', '<F10>', require('dap').step_over, { desc = 'Debug: Step Over' })
+map('n', '<F11>', require('dap').step_into, { desc = 'Debug: Step Into' })
+map('n', '<F12>', require('dap').step_out, { desc = 'Debug: Step Out' })
+map('n', '<leader>b', require('dap').toggle_breakpoint, { desc = 'Debug: Toggle Breakpoint' })
+map('n', '<leader>du', require('dapui').toggle, { desc = 'Debug: Toggle UI' })
 
 map("n", "<leader>ma", function() --quick make in dir of buffer
 	local bufdir = vim.fn.expand("%:p:h")

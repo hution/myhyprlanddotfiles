@@ -38,7 +38,7 @@ Plug('numToStr/FTerm.nvim') --floating terminal
 Plug('ron-rs/ron.vim') --ron syntax highlighting
 Plug('MeanderingProgrammer/render-markdown.nvim') --render md inline
 Plug('emmanueltouzery/decisive.nvim') --view csv files
-Plug('folke/twilight.nvim') --surrounding dim
+--[[ Plug('folke/twilight.nvim') --surrounding dim ]]
 Plug('mrcjkb/rustaceanvim') --Rust centered plugin
 Plug('mfussenegger/nvim-dap') --Debug Adapter Protocol
 Plug('neovim/nvim-lspconfig') --Stores common lsp settings
@@ -46,6 +46,14 @@ Plug('stevearc/conform.nvim') --Conform to best conventions
 Plug('rcarriga/nvim-dap-ui') --UI for DAP
 Plug('rust-lang/rust.vim')
 Plug('saecki/crates.nvim')
+Plug('hrsh7th/nvim-cmp')
+Plug('hrsh7th/cmp-nvim-lsp')
+Plug('hrsh7th/cmp-buffer')
+Plug('hrsh7th/cmp-path')
+Plug('williamboman/mason.nvim')
+Plug('williamboman/mason-nvim-dap.nvim')
+Plug('nvim-neotest/nvim-nio')
+
 vim.call('plug#end')
 
 -- move config and plugin config to alternate files
@@ -70,7 +78,14 @@ require("plugins.render-markdown")
 -- require("plugins.treesitter")
 -- require("plugins.twilight")
 -- require("plugins.which-key")
---require("plugins.rust")
+require("plugins.rust")
+require("plugins.lsp")
+require("plugins.cmp")
+require('mason').setup()
+require('mason-nvim-dap').setup({
+  ensure_installed = { 'codelldb' }
+})
+require('plugins.dap')
 
 vim.defer_fn(function() 
 		--defer non-essential configs,
@@ -81,7 +96,7 @@ require("plugins.fterm")
 require("plugins.fzf-lua")
 require("plugins.nvim-tree")
 require("plugins.treesitter")
-require("plugins.twilight")
+--[[ require("plugins.twilight") ]]
 require("plugins.which-key")
 end, 100)
 
