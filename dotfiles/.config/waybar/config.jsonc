@@ -107,11 +107,13 @@
 	},
 	"memory": {
 		"interval": 5,
-		"format": "Mem {}%"
+		"format": "Mem {}%",
+		"on-click": "kitty --class floating-btop -e btop"	
 	},
 	"cpu": {
 		"interval": 5,
-		"format": "CPU {usage:2}%"
+		"format": "CPU {usage:2}%",
+		"on-click": "kitty --class floating-btop -e btop"	
 	},
 	"battery": {
 		"states": {
