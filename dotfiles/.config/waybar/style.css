@@ -27,6 +27,7 @@ window#waybar {
 #cpu,
 #battery,
 #disk,
+#network,
 #tray {
 	background: #1a1a1a;
 }
@@ -46,6 +47,10 @@ window#waybar {
 	background: #1a1a1a;
 	border: #1a1a1a;
 	padding: 0 3px;
+}
+
+#network {
+		padding: 0 15px;
 }
 
 #workspaces button.active {

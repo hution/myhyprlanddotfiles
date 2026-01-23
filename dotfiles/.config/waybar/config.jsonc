@@ -13,13 +13,15 @@
 	"modules-right": [
     "custom/left-arrow-dark",
     "clock#1",
-    "custom/left-arrow-light",
+    //"custom/left-arrow-light",
     "custom/left-arrow-dark",
     "clock#2",
-    "custom/left-arrow-light",
+    //"custom/left-arrow-light",
     "custom/left-arrow-dark",
     "clock#3",
     "custom/left-arrow-light",
+	"network",
+	"custom/left-arrow-light",
 		"custom/left-arrow-dark",
 		"pulseaudio",
 		"custom/left-arrow-light",
@@ -114,6 +116,12 @@
 		"interval": 5,
 		"format": "CPU {usage:2}%",
 		"on-click": "kitty --class floating-btop -e btop"	
+	},
+	"network": {
+		"interface": "wlan*",
+		"format-wifi":  " {signalStrength}%",
+		"tooltip-format": "{essid} ({signalStrength}%)",
+		"on-click": "kitty --class floating-nmtui -e nmtui"
 	},
 	"battery": {
 		"states": {
