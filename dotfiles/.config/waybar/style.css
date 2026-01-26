@@ -90,11 +90,13 @@ window#waybar {
 	color: #b58900;
 }
 
+
 #clock,
 #pulseaudio,
 #memory,
 #cpu,
 #battery,
+#tray,
 #disk {
 	padding: 0 10px;
 }

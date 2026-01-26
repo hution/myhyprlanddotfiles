@@ -163,6 +163,7 @@
 		"path": "/"
 	},
 	"tray": {
-		"icon-size": 20
+		"icon-size": 25,
+		"spacing": 5
 	}
 }
