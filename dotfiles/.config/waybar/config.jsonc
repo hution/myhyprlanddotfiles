@@ -35,6 +35,8 @@
 		"battery",
 		"custom/left-arrow-light",
 		"custom/scan",
+		"custom/left-arrow-light",
+		"custom/screenshot",
 		"custom/left-arrow-dark",
 		"tray",
 		"custom/power"
@@ -168,6 +170,11 @@
 		"tooltip": false,
 		"icon-size": 40
     },
+	"custom/screenshot": {
+		"format": "📷",
+		"tooltip": "Screenshot",
+		"on-click": "grim -g \"$(slurp)\" - | swappy -f -"  
+	},
     "custom/scan": {
     "format": "📄",
     "on-click": "~/bin/scan-to-paperless.sh 'Document being scanned...'",
