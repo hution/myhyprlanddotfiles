@@ -12,10 +12,10 @@
 	"modules-center": ["hyprland/window"],
 	"modules-right": [
     "custom/left-arrow-dark",
-    "clock#1",
+    "clock#2",
     //"custom/left-arrow-light",
     "custom/left-arrow-dark",
-    "clock#2",
+    "clock#1",
     //"custom/left-arrow-light",
     "custom/left-arrow-dark",
     "clock#3",
@@ -39,7 +39,8 @@
 		"custom/screenshot",
 		"custom/left-arrow-dark",
 		"tray",
-		"custom/power"
+		"custom/power",
+		"custom/left-arrow-dark"
 	],
 
   "hyprland/window": {
@@ -168,7 +169,8 @@
 		"format": "⏻",
 		"on-click": "~/Projects/myhyprlanddotfiles/dotfiles/.config/waybar/scripts/power-menu.sh",
 		"tooltip": false,
-		"icon-size": 40
+		"icon-size": 40,
+		"margin-right": 8
     },
 	"custom/screenshot": {
 		"format": "📷",
